@@ -1,0 +1,71 @@
+body {
+    background-color: #dedede;
+}
+
+/* Tiêu đề */
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+}
+
+/* Link */
+a {
+    color: #000;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Định dạng đoạn văn */
+p {
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Hình ảnh */
+img {
+    width: 100%;
+}
+
+div img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+/* Thiết lập div chứa ảnh */
+div {
+    display: inline-block;
+    width: 100%; /* Mặc định full width trên mobile */
+    margin: 5px;
+    padding: 2px;
+    text-align: center;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet View: Viewport ≥ 772px */
+@media screen and (min-width: 772px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Căn đều các div */
+    }
+
+    div {
+        width: 45%; /* Mỗi div chiếm 45% chiều rộng */
+    }
+
+    div img {
+        max-height: 30vh; /* Giới hạn chiều cao ảnh */
+    }
+}
+
+/* Large Screen View: Viewport ≥ 998px */
+@media screen and (min-width: 998px) {
+    div {
+        width: 30%; /* Mỗi div chiếm 30% chiều rộng */
+    }
+}
